@@ -1,0 +1,26 @@
+.banner {
+    width: 100%;
+}
+
+.banner--image {
+    width: 100%;
+}
+
+.banner__section {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner--btn {
+    background: #ECAD2C;
+    color: #fff;
+    width: 12rem;
+    padding: 1.4rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+}
