@@ -59,3 +59,13 @@
     margin-top: 1.5rem;
     cursor: pointer;
 }
+
+.about--image-2 {
+    background-image: url('../../../images/roadside.JPEG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    min-height: 400px;
+}

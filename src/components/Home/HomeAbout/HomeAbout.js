@@ -2,6 +2,7 @@ import React from 'react'
 import './HomeAbout.css'
 
 import LABANNER from '../../../images/los-angeles.JPEG'
+import RoadSide from '../../../images/roadside.JPEG'
 
 const HomeAbout = () => {
     return(
@@ -36,6 +37,9 @@ const HomeAbout = () => {
                     </p>
                     <button className="about--section-btn">Explore the Ceremony</button>
                 </div>
+            </div>
+            <div className="about--banner">
+                <div className="about--image-2"></div>
             </div>
         </div>
     )
