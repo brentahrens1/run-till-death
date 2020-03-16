@@ -1,9 +1,6 @@
 import React from 'react'
 import './HomeAbout.css'
 
-import LABANNER from '../../../images/los-angeles.JPEG'
-import RoadSide from '../../../images/roadside.JPEG'
-
 const HomeAbout = () => {
     return(
         <div className="about">
@@ -25,7 +22,7 @@ const HomeAbout = () => {
                 </div>
             </div>
             <div className="about--banner">
-                <div className="about--image"></div>
+                <div className="about--image parallax"></div>
             </div>
             <div className="about--section">
                 <div>
@@ -39,7 +36,7 @@ const HomeAbout = () => {
                 </div>
             </div>
             <div className="about--banner">
-                <div className="about--image-2"></div>
+                <div className="about--image-2 parallax"></div>
             </div>
         </div>
     )

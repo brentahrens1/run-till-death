@@ -17,3 +17,29 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+button {
+  background: #ECAD2C;
+  color: #fff;
+  padding: 1.4rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  min-height: 400px;
+}
+
+@media (max-width: 767px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
