@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import '../../fonts/CloisterBlack.ttf'
 
 import HomeBanner from './HomeBanner/HomeBanner'
 import HomeAbout from './HomeAbout/HomeAbout'

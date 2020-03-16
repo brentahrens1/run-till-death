@@ -6,14 +6,14 @@ const HomeAbout = () => {
         <div className="about">
             <div className="about--info">
                 <div className="about--info__item">
-                    <h2 className="about--info__item--header">RTD is...</h2>
+                    <h2 className="about--info__item--header gothic">RTD is...</h2>
                     <p className="about--info__item--text">…A Cult for those who run religiously.</p> 
                     <p className="about--info__item--text">…For competitive runners who organize their lives around TRAINING TO RACE.</p>
                     <p className="about--info__item--text">…For those who want to be the fastest possible runners they can be. Regardless of level. Till Death.</p>
                     <p className="about--info__item--text">The Long Run is our Church. Miles are the Magick. A PR is your Rite.</p>
                 </div>
                 <div className="about--info__item">
-                    <h2 className="about--info__item--header">RTD is not...</h2>
+                    <h2 className="about--info__item--header gothic">RTD is not...</h2>
                     <p className="about--info__item--text">…For everyone.</p> 
                     <p className="about--info__item--text">…Where you will be overtrained or burned out.</p>
                     <p className="about--info__item--text">…For beginners. For those who run for “fitness” or simply to finish.</p>
@@ -26,7 +26,7 @@ const HomeAbout = () => {
             </div>
             <div className="about--section">
                 <div>
-                    <h1 className="about--section-header">Coaching Services</h1>
+                    <h1 className="about--section-header gothic">Coaching Services</h1>
                 </div>
                 <div className="about__content">
                     <p className="about--section-info">
