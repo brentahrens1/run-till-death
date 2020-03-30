@@ -43,3 +43,13 @@ button {
     background-attachment: scroll;
   }
 }
+
+@font-face {
+  font-family: 'CloisterBlack';
+  src: local('CloisterBlack'), url(./fonts/CloisterBlack.ttf) format('truetype');
+}
+
+.gothic {
+  font-family: CloisterBlack;
+  font-weight: 200;
+}
