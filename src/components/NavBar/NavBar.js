@@ -19,7 +19,7 @@ import {
 
 const NavBar = () => {
     const [ isOpen, setIsOpen ] = useState(false)
-
+    window.onresize = () => (window.innerWidth > 900 && isOpen) && setIsOpen(false)
     return (
         <NavContainer>
             <NavLogo>
@@ -36,7 +36,7 @@ const NavBar = () => {
             <Overlay className={ isOpen ? "show" : "hide"}>
                     {
                         routes.map(route => 
-                            <NavBarLink className="overlay-links" exact to={route.path}>{route.text}</NavBarLink>
+                            <NavBarLink className="overlay-links" exact to={route.path} onClick={() => setIsOpen(false)}>{route.text}</NavBarLink>
                         )
                     }
             </Overlay>

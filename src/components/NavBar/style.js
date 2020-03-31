@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const NavContainer = styled.div`
@@ -44,7 +44,7 @@ export const NavBarLink = styled(NavLink)`
         display: block;
         background: #fff;
         width: 0;
-        height: 2px;
+        height: 1.2px;
         transition: width .3s;
         margin-top: .2rem;
     }
