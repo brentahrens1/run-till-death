@@ -1,10 +1,19 @@
-
+const Admin = require('../models/admin')
 
 module.exports = {
-    index
+    signup
 }
 
-function index(req, res) {
-    res.send('This is the response')
+async function signup(req, res) {
+    const admin = new Admin(req.body)
+    try {
+        await admin.save()
+        res.json(admin)
+    }
+    catch (err) {
+        res.status(400).json(err)
+    }
 }
+
+
 

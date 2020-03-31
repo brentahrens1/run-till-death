@@ -2,6 +2,6 @@ const express = require('express')
 const router = express.Router()
 const adminCtrl = require('../controller/admin')
 
-router.get('/', adminCtrl.index)
+router.post('/signup', adminCtrl.signup)
 
 module.exports = router
