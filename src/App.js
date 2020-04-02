@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom"
 import NavBar from './components/NavBar/NavBar'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
+import AdminAuth from './components/Admin/AdminAuth'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className="App__body">
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/admin-auth" exact component={AdminAuth} />
         </Switch>
       </div>
       <Footer />

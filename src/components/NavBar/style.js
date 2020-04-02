@@ -16,11 +16,18 @@ export const NavContainer = styled.div`
 
 export const NavLogo = styled.div`
     font-size: 1.2rem;
+    @media (max-width: 950px) {
+        white-space: nowrap;
+        font-size: .8rem;
+    }
 `
 
 export const NavList = styled.div`
     width: 45%;
     font-size: 17.6px;
+    @media (max-width: 1055px) {
+        font-size: 15px;
+    }
     @media (max-width: 950px) {
         a {
             display: none;
