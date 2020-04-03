@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 
+import userService from '../../utils/userService'
+
 import {
     AuthContainer,
     AuthForm
 } from './AdminAuthStyle'
 
-const AdminAuth = () => {
+const AdminAuth = (props) => {
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
 
@@ -23,16 +25,22 @@ const AdminAuth = () => {
             email: email,
             password: password
         }
-        // await userService.signup(credentials)
+        try {
+            await userService.signup(credentials)
+            props.history.push('/')
+        }
+        catch(err) {
+            console.log(err)
+        }
     }
 
     return (
         <AuthContainer>
-            <h1>Admin Log In</h1>
-            <AuthForm>
+            <h1>Admin Sign Up</h1>
+            <AuthForm onSubmit={handleSubmit}> 
                 <input type="email" placeholder="email" name="email" onChange = {handleChange}></input>
                 <input type="password" placeholder="password" name="password" onChange = {handleChange}></input>
-                <button type="submit" name="submit">Log In</button>
+                <button type="submit" name="submit">Sign Up</button>
             </AuthForm>
         </AuthContainer>
     )

@@ -5,6 +5,7 @@ module.exports = {
 }
 
 async function signup(req, res) {
+    console.log('hello')
     const admin = new Admin(req.body)
     try {
         await admin.save()
