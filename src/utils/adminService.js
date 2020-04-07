@@ -1,3 +1,5 @@
+import tokenService from './tokenService'
+
 const BASE_URL = '/admin/'
 
 function signup(user) {
@@ -10,9 +12,17 @@ function signup(user) {
         if (res.ok) return res.json()
         throw new Error('Invalid Credentials')
     })
-    .then(data => data)
+    .then(({token}) => {
+        tokenService.setToken(token)
+    })
 }
 
+function getAdmin() {
+    return tokenService.getAdminFromToken()
+}
+
+
 export default { 
-    signup
+    signup,
+    getAdmin
 }

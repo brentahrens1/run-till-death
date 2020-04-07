@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import userService from '../../utils/userService'
+import userService from '../../utils/adminService'
 
 import {
     AuthContainer,
