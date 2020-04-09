@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 import { Switch, Route } from "react-router-dom" 
@@ -12,22 +12,16 @@ import adminService from './utils/adminService'
 
 function App() {
   const [currentAdmin, setCurrentAdmin] = useState(adminService.getAdmin())
-  useEffect(
-    () => {
-      setCurrentAdmin(adminService.getAdmin())
-    },
-    [sessionStorage]
-  )
   return (
     <div className="App">
       <NavBar />
       <div className="App__body">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/admin-auth" exact component={AdminAuth} />
+          <Route path="/admin-auth" exact render={() => <AdminAuth setCurrentAdmin={setCurrentAdmin} />} />
         </Switch>
       </div>
-      <Footer currentAdmin={currentAdmin} />
+      <Footer currentAdmin={currentAdmin} setCurrentAdmin={setCurrentAdmin} />
     </div>
   )
 }

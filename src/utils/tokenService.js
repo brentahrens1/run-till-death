@@ -1,17 +1,17 @@
 function setToken(token) {
     if(token) {
-        sessionStorage.setItem('token', token)
+        localStorage.setItem('token', token)
     } else {
-        sessionStorage.removeItem('token')
+        localStorage.removeItem('token')
     }
 }
 
 function getToken(){
-    let token = sessionStorage.getItem('token')
+    let token = localStorage.getItem('token')
     if(token) {
         const payload = JSON.parse(atob(token.split('.')[1]))
         if(payload.exp < Date.now() / 1000) {
-            sessionStorage.removeItem('token')
+            localStorage.removeItem('token')
             token = null
         }
     }
@@ -23,8 +23,13 @@ function getAdminFromToken() {
     return token ? JSON.parse(atob(token.split('.')[1])).admin : null
 }
 
+function removeToken() {
+    localStorage.removeItem('token')
+}
+
 export default {
     setToken,
     getToken,
-    getAdminFromToken
+    getAdminFromToken,
+    removeToken
 }

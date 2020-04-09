@@ -28,15 +28,15 @@ const NavBar = () => {
             <NavList>
                 <NavItems>
                     {
-                        routes.map(route => <NavBarLink exact to={route.path}>{route.text}</NavBarLink>)
+                        routes.map((route, idx) => <NavBarLink key={idx} to={route.path}>{route.text}</NavBarLink>)
                     }
                 </NavItems>
             </NavList>
             <Hamburger setIsOpen={setIsOpen} isOpen={isOpen} />
             <Overlay className={ isOpen ? "show" : "hide"}>
                     {
-                        routes.map(route => 
-                            <NavBarLink className="overlay-links" exact to={route.path} onClick={() => setIsOpen(false)}>{route.text}</NavBarLink>
+                        routes.map((route, idx) => 
+                            <NavBarLink key={idx} className="overlay-links" to={route.path} onClick={() => setIsOpen(false)}>{route.text}</NavBarLink>
                         )
                     }
             </Overlay>
