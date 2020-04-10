@@ -19,7 +19,22 @@
 }
 
 .footer__item {
+    display: inline-block;
     margin-top: .2rem;
+}
+
+.footer__item::after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 0;
+    height: 1.2px;
+    transition: width .3s;
+    margin-top: .2rem;
+}
+
+.footer__item:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 600px) {
