@@ -5,7 +5,7 @@ export const NavContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     position: fixed;
     width: 100%;
     height: 5rem;
@@ -16,6 +16,7 @@ export const NavContainer = styled.div`
 
 export const NavLogo = styled.div`
     font-size: 1.2rem;
+    align-self: center;
     @media (max-width: 950px) {
         white-space: nowrap;
         font-size: .8rem;
